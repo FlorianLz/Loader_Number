@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loader{
+    position:fixed;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color:#21283f;
+    z-index:10000;
+}
+.loader:before{
+    content: 'Chargement...';
+    position:absolute;
+    font-weight: 900;;
+    font-size:12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.03);
+}
+.loader.active{
+    transform: translateY(-100vh);
+    transition:ease-in-out 2s;
+    transition-delay: 1s;
+}
+
+.counter{
+    position: relative;
+    color:#fff;
+    font-size:16em;
+    font-weight:700;
+    z-index:1;
+}
+.counter:after{
+    content: '%';
+    font-size:0.5em;
+}
+
+.hide{
+    opacity:0;
+    transition:1s;
+    pointer-events:none;
+}
